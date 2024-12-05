@@ -26,7 +26,7 @@ body {
 
 /* Header */
 header {
-    background-color: #0078D7;
+    background-color: #BB0000;
     color: white;
     padding: 20px 0;
 }
@@ -56,7 +56,7 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #0078D7;
+    color: #BB0000;
 }
 
 section p, section ul {
@@ -75,7 +75,7 @@ ul li {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #212325;
     color: white;
     padding: 10px 0;
 }
