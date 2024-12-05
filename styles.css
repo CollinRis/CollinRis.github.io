@@ -12,20 +12,21 @@ body {
     background-color: #f9f9f9;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Space around the edges of the page */
 }
 
 /* Container */
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 85%;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 20px; /* Space inside the container */
     text-align: center;
 }
 
 /* Header */
 header {
-    background-color: #BB0000;
+    background-color: #0078D7;
     color: white;
     padding: 20px 0;
 }
@@ -45,13 +46,17 @@ main {
 }
 
 section {
-    margin-bottom: 40px;
+    margin: 20px auto; /* Space between sections */
+    padding: 15px 20px; /* Space inside the section */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #666666;
+    color: #0078D7;
 }
 
 section p, section ul {
