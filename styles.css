@@ -51,10 +51,11 @@ nav {
     display: inline-block;
 }
 
+/* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -62,16 +63,18 @@ nav {
 }
 
 .dropdown-content a {
-    color: #0078D7;
+    color: #BB0000;
     padding: 10px 15px;
     text-decoration: none;
     display: block;
     text-align: left;
+    background-color: rgba(255, 255, 255, 0.9); /* Match the menu background */
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(0, 120, 215, 0.1); /* Slightly transparent hover effect */
 }
+
 
 .dropdown:hover .dropdown-content {
     display: block;
