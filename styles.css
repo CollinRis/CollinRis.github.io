@@ -9,14 +9,14 @@ body, h1, h2, p, ul, li, a {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #000000;
-    color: #333;
+    background-color: #E7D7C1; /* Beige */
+    color: #735751; /* Dark brown */
     margin: 0;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #BB0000;
+    background-color: #8C1C13; /* Dark red */
     padding: 10px 0;
 }
 
@@ -41,7 +41,7 @@ nav {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #BB0000;
+    background-color: #BF4342; /* Muted red */
     border-radius: 5px;
 }
 
@@ -51,11 +51,10 @@ nav {
     display: inline-block;
 }
 
-/* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
+    background-color: rgba(231, 215, 193, 0.9); /* Beige with opacity */
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -63,18 +62,17 @@ nav {
 }
 
 .dropdown-content a {
-    color: #BB0000;
+    color: #8C1C13; /* Dark red */
     padding: 10px 15px;
     text-decoration: none;
     display: block;
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.9); /* Match the menu background */
+    background-color: rgba(231, 215, 193, 0.9); /* Match the menu background */
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(0, 120, 215, 0.1); /* Slightly transparent hover effect */
+    background-color: rgba(191, 67, 66, 0.1); /* Muted red hover */
 }
-
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -82,7 +80,7 @@ nav {
 
 /* Header */
 header {
-    background-color: #BB0000;
+    background-color: #8C1C13; /* Dark red */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -105,7 +103,7 @@ main {
 section {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #333;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -113,7 +111,7 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #BB0000;
+    color: #BF4342; /* Muted red */
 }
 
 section p, section ul {
@@ -132,7 +130,7 @@ ul li {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #735751; /* Dark brown */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -141,24 +139,24 @@ footer {
 footer p {
     font-size: 0.9rem;
 }
+
 /* Back to Top Button */
 #backToTopBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed position */
-    bottom: 20px; /* 20px from the bottom */
-    right: 30px; /* 30px from the right */
-    z-index: 99; /* Ensure it is above other elements */
-    border: none; /* No border */
-    outline: none; /* No outline */
-    background-color: #BB0000; /* Match your site's color scheme */
-    color: white; /* Text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    padding: 15px; /* Padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Font size */
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #BF4342; /* Muted red */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
 #backToTopBtn:hover {
-    background-color: #555; /* Darker background on hover */
+    background-color: #A78A7F; /* Light brown */
 }
-
