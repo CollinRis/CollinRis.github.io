@@ -9,7 +9,7 @@ body, h1, h2, p, ul, li, a {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #666666;
+    background-color: #000000;
     color: #333;
     margin: 0;
 }
@@ -105,7 +105,7 @@ main {
 section {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #333;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -113,7 +113,7 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #0078D7;
+    color: #BB0000;
 }
 
 section p, section ul {
