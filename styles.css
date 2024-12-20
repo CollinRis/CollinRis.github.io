@@ -141,3 +141,24 @@ footer {
 footer p {
     font-size: 0.9rem;
 }
+/* Back to Top Button */
+#backToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* Ensure it is above other elements */
+    border: none; /* No border */
+    outline: none; /* No outline */
+    background-color: #BB0000; /* Match your site's color scheme */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 15px; /* Padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Font size */
+}
+
+#backToTopBtn:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
