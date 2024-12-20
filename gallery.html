@@ -24,5 +24,27 @@
     <footer>
         <p>&copy; 2024 Collin Rismiller. All Rights Reserved.</p>
     </footer>
+    <button id="backToTopBtn" title="Go to top">Top</button>
+    <script>
+    // Get the button
+    let backToTopBtn = document.getElementById("backToTopBtn");
+
+    // Show the button when the user scrolls down 100px from the top
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    backToTopBtn.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 </body>
 </html>
