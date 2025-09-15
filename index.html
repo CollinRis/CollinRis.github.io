@@ -64,7 +64,13 @@
                     
                     <center>
                         <h4 style="max-width: 600px; margin: 1.5rem auto; padding: 1rem; background-color: rgba(0, 0, 0, 0.6); color: white; border-radius: 8px;">
-                            <a href="CollinRismillerResume.pdf" class="btn-rounded-white" target="_blank">
+                            <a href="CollinRismillerResume.pdf" 
+                            class="btn-rounded-white" 
+                            target="_blank"
+                            onclick="gtag('event', 'resume_download', {
+                                event_category: 'engagement',
+                                event_label: 'CollinRismillerResume.pdf'
+                            });">
                                 <i class="fa fa-download" aria-hidden="true"></i> Download Resume
                             </a>
                             &nbsp; &nbsp; &nbsp;
