@@ -31,7 +31,7 @@ header {
 
 header #menu {
     display: flex;
-    justify-content: center; /* centers the nav items */
+    justify-content: flex-end; /* centers the nav items */
     gap: 2rem;
     list-style: none;
     margin: 0;
@@ -46,7 +46,7 @@ header #menu li a {
 }
 
 header #menu li a:hover {
-    color: #ffcc00; /* highlight color on hover (optional) */
+    color: #fa6666; /* highlight color on hover (optional) */
 }
 body {
     padding-top: 70px; /* adjust so main content isn’t covered by the fixed header */
