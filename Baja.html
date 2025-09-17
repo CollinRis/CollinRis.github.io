@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="Learn about Collin Rismiller’s work with the Baja Buckeyes, Ohio State’s student engineering team that designs, builds, and races off-road vehicles in SAE Baja competitions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baja Buckeyes – Ohio State SAE Baja Team</title>
+
+  <link rel="icon" href="CollinRis.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu">☰ Menu</label>
+
+    <ul id="menu">
+      <li><a href="/" class="back-home" rel="noopener">Back To Home</a></li>
+    </ul>
+  </header>
+
+  <!-- Lead / Hero -->
+  <div id="lead">
+    <div id="particles-js">
+      <div id="lead-content">
+        <h1 class="highlight-box">Baja Buckeyes</h1>
+        <h2 class="highlight-box">Ohio State Center for Automotive Research</h2>
+        <p class="highlight-box">
+          The Baja Buckeyes are The Ohio State University’s student engineering team that designs, builds, and races off-road vehicles in SAE Baja competitions, combining hands-on engineering, teamwork, and real-world problem solving.
+        </p>
+      </div>
+    </div>
+    <!-- Fallback -->
+    <div id="no-particles-js">
+      <div id="no-lead-content">
+        <h1 class="highlight-box">Baja Buckeyes</h1>
+        <h2 class="highlight-box">Ohio State Center for Automotive Research</h2>
+        <p class="highlight-box">
+          As part of the team, I work on data acquisition, electrical design, and testing systems that bring our cars to life in competition.
+        </p>
+      </div>
+    </div>
+
+    <div id="lead-overlay"></div>
+    <div id="lead-down">
+      <p><span><i class="fa fa-angle-down" aria-hidden="true"></i></span></p>
+    </div>
+  </div>
+
+  <!-- Project Overview -->
+  <section id="baja-project" class="background-alt">
+    <div class="container">
+      <h2 class="heading">My Role on the Team</h2>
+      <p>
+        As Data Acquisition Lead, I design and implement the systems that monitor our car’s performance in real time. This includes integrating sensors for suspension travel, engine data, GPS, and acceleration, as well as developing custom PCBs for data logging and CAN bus communication.
+      </p>
+
+      <div class="row" style="margin-top: 1rem;">
+        <div class="col-md-6">
+          <img
+            src="BajaBuckeyes/baja1.jpg"
+            alt="Baja Buckeyes team working on car"
+            class="img-responsive"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-md-6">
+          <img
+            src="BajaBuckeyes/baja2.jpg"
+            alt="Baja Buckeyes vehicle in competition"
+            class="img-responsive"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <p style="margin-top: 1rem;">
+        Through this work I’ve gained experience in electrical engineering, embedded systems, and testing under real competition conditions. Baja has strengthened my leadership, teamwork, and problem-solving skills, while giving me the opportunity to apply classroom knowledge to real-world engineering challenges.
+      </p>
+    </div>
+  </section>
+
+  <!-- Thanks -->
+  <section id="thanks" class="background-alt-dark" style="padding: 50px 15px;">
+    <div class="container">
+      <h2 class="heading">Acknowledgments</h2>
+      <p>
+        Thank you to my teammates, faculty mentors, and sponsors who support the Baja Buckeyes and make it possible for us to design, build, and compete at the highest level.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="background-alt-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 copyright">
+          <p>Made by Collin Rismiller.</p>
+        </div>
+        <div class="col-sm-8 social">
+          <ul>
+            <li>
+              <a href="https://github.com/CollinRis" target="_blank" rel="noopener">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/Collin-Rismiller/" target="_blank" rel="noopener">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+
+  <!-- Auto-close mobile menu -->
+  <script>
+    (function () {
+      const navToggle = document.getElementById('nav-toggle');
+      const menu = document.getElementById('menu');
+      const toggleBtn = document.querySelector('.nav-toggle-btn');
+
+      if (!navToggle || !menu) return;
+
+      menu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          navToggle.checked = false;
+          syncAria();
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (navToggle.checked && !e.target.closest('header')) {
+          navToggle.checked = false;
+          syncAria();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navToggle.checked) {
+          navToggle.checked = false;
+          syncAria();
+        }
+      });
+
+      function syncAria() {
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', navToggle.checked ? 'true' : 'false');
+      }
+      navToggle.addEventListener('change', syncAria);
+      syncAria();
+    })();
+  </script>
+  <script>
+  (function () {
+    document.querySelectorAll('a.back-home').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.stopImmediatePropagation();
+        window.location.href = a.href;
+        e.preventDefault();
+      }, true);
+    });
+  })();
+  </script>
+</body>
+</html>
