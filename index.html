@@ -70,29 +70,18 @@
     </div>-->
         <!-- End #mobile-menu-toggle -->
         <header>
-            <div id="mobile-menu-close">
-                <span>Close</span>
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </div>
-            <ul id="menu">
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#companies">Experience</a>
-                </li>
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-            </ul>
-        </header>
-        <!-- End header -->
+  <!-- mobile hamburger checkbox (CSS-only) -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+  <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu">☰ Menu</label>
+
+  <ul id="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#companies">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+  </ul>
+</header>
 
 <!-- Lead / Hero -->
 <div id="lead">
@@ -189,7 +178,7 @@
                     <div class="col-md-7">
                         <br>
                         <p>
-                            I'm Collin Rismiller, a student from The Ohio State University with pursuing a degree in Electrical and Computer Engineering. I have a passion for technology and innovation, and I'm always eager to learn new skills and take on new challenges. My interests include software development, embedded systems, and data analysis. I thrive in collaborative environments where I can contribute my technical expertise while also learning from others. In my free time, I enjoy working on personal projects, exploring new technologies, and staying active outdoors. I participate in the Society of Automotive Engineers (SAE) at Ohio State, where I work on the Baja team. I'm excited to connect with like-minded individuals and explore opportunities in the tech industry.
+                            I'm Collin Rismiller, a student from The Ohio State University pursuing a degree in Electrical and Computer Engineering. I have a passion for technology and innovation, and I'm always eager to learn new skills and take on new challenges. My interests include software development, embedded systems, and data analysis. I thrive in collaborative environments where I can contribute my technical expertise while also learning from others. In my free time, I enjoy working on personal projects, exploring new technologies, and staying active outdoors. I participate in the Society of Automotive Engineers (SAE) at Ohio State, where I work on the Baja team. I'm excited to connect with like-minded individuals and explore opportunities in the tech industry.
                         </p>
                     </div>
                 </div>
@@ -364,6 +353,53 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/particles.min.js"></script>
         <script src="js/scripts.min.js"></script>
+        <script>
+        // Auto-close mobile menu after interactions
+        (function () {
+            const navToggle = document.getElementById('nav-toggle');
+            const menu = document.getElementById('menu');
+            const toggleBtn = document.querySelector('.nav-toggle-btn');
+
+            // Close when a menu link is clicked
+            menu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navToggle.checked = false;
+                syncAria();
+            }
+            });
+
+            // Close when clicking outside the header
+            document.addEventListener('click', (e) => {
+            if (navToggle.checked && !e.target.closest('header')) {
+                navToggle.checked = false;
+                syncAria();
+            }
+            });
+
+            // Close on Esc
+            document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navToggle.checked) {
+                navToggle.checked = false;
+                syncAria();
+            }
+            });
+
+            // Close after in-page anchor navigation (e.g., #about)
+            window.addEventListener('hashchange', () => {
+            if (navToggle.checked) {
+                navToggle.checked = false;
+                syncAria();
+            }
+            });
+
+            // Keep ARIA state accurate
+            function syncAria() {
+            if (toggleBtn) toggleBtn.setAttribute('aria-expanded', navToggle.checked ? 'true' : 'false');
+            }
+            navToggle.addEventListener('change', syncAria);
+            syncAria();
+        })();
+        </script>
 
     </body>
 
