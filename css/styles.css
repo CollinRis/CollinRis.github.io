@@ -158,8 +158,13 @@ body { padding-top: 72px; }
   #menu { height: auto; overflow: visible; width: 100%; box-shadow: none; }
 }
 /* End of mobile-friendly patches */
-
-@media (max-width: 768px){
-  header { position: sticky; top: 0; }
-  body { padding-top: 0; }  /* remove the hardcoded offset */
+/* Fix mobile gap above hero */
+@media (max-width: 992px){
+  #lead {
+    padding-top: 24px !important;   /* was 100px */
+    padding-bottom: 48px !important;
+  }
+  #lead-content h1, #lead-content h2 { margin: .5rem auto !important; }
+  .highlight-box { margin: .75rem auto !important; }  /* tighten spacing inside hero */
 }
+
