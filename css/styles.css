@@ -51,3 +51,115 @@ header #menu li a:hover {
 body {
     padding-top: 70px; /* adjust so main content isn’t covered by the fixed header */
 }
+
+/* --- MOBILE-FRIENDLY PATCHES --- */
+
+/* 0) Micro-fixes */
+#particles-js { /* remove invalid float */
+  /* float:center; */ 
+}
+#no-particles-js { display: none; } /* correct the missing # */
+img { max-width: 100%; height: auto; }
+
+/* 1) Header: keep fixed, let items wrap on small screens */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(0,0,0,.6); backdrop-filter: blur(6px);
+  padding: .75rem 0;
+}
+header #menu {
+  display: flex; flex-wrap: wrap; gap: 1rem; 
+  justify-content: center; /* nicer on narrow phones */
+  margin: 0; padding: 0 1rem; list-style: none;
+}
+header #menu li a { font-weight: 600; }
+
+/* 2) Give the page breathing room under the fixed header */
+body { padding-top: 72px; }
+
+/* 3) Hero text: scale down on phones */
+#lead-content h1 { 
+  font-size: clamp(1.75rem, 6vw, 5em);
+  margin: .75rem auto;
+}
+#lead-content h2, #no-lead-content h2 {
+  font-size: clamp(1rem, 3.5vw, 2.25em);
+  margin: .5rem auto 1rem;
+}
+#lead-content h4, #no-lead-content h4 { 
+  font-size: clamp(.9rem, 3vw, 1rem);
+  margin: .5rem auto;
+}
+
+/* 4) Prefer reduced motion: hide particles for users who opt out */
+@media (prefers-reduced-motion: reduce) {
+  #particles-js { display: none !important; }
+  #no-particles-js { display: block !important; }
+}
+
+/* 5) Ensure the "no particles" fallback shows on tablets/phones */
+@media only screen and (max-width: 992px){
+  #particles-js { display: none; }
+  #no-particles-js { display: block; }
+  #lead { height: auto; min-height: auto; max-height: none; padding: 100px 15px; }
+  #no-lead-content { 
+    display: block; position: relative; transform: none; left: auto; top: auto;
+  }
+}
+
+/* 6) About section: stack nicely on mobile */
+@media (max-width: 768px){
+  #about { text-align: center; }
+  #about p { text-align: left; margin: 0; }
+}
+
+/* 7) Companies: responsive logo grid */
+#companies ul {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  padding: 0; margin: 0 auto; max-width: 1100px;
+}
+#companies li { 
+  list-style: none; background: #f2f2f5; padding: 12px; 
+  display: flex; align-items: center; justify-content: center;
+}
+#companies img { max-height: 60px; height: auto; }
+
+/* 8) Projects: ensure image/text don’t overflow on narrow screens */
+.project { overflow: hidden; }
+@media (max-width: 768px){
+  .project-image { display: none; }
+  .project-info {
+    position: relative; margin: 0; top: auto; transform: none; padding: 15px;
+  }
+}
+
+/* 9) Buttons: keep comfy but not giant on tiny screens */
+@media (max-width: 480px){
+  .btn-rounded-white { padding: 10px 14px; }
+}
+
+/* 10) Contact form: full width on phones */
+#contact-form input, 
+#contact-form textarea, 
+#contact-form button {
+  width: 100%; max-width: 700px; margin-left: auto; margin-right: auto;
+}
+
+/* 11) Highlight box utility—ok as-is; center by default */
+.highlight-box { text-align: center; }
+
+/* 12) If you keep the original overlay mobile menu, disable it.
+   We’ll just let the header wrap, which is simpler. */
+@media only screen and (max-width: 768px){
+  header { display: block; height: auto; bottom: auto; }
+  #mobile-menu-open, #mobile-menu-close { display: none; }
+  #menu { height: auto; overflow: visible; width: 100%; box-shadow: none; }
+}
+/* End of mobile-friendly patches */
+
+@media (max-width: 768px){
+  header { position: sticky; top: 0; }
+  body { padding-top: 0; }  /* remove the hardcoded offset */
+}

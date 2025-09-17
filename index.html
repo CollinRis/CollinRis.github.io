@@ -94,65 +94,88 @@
         </header>
         <!-- End header -->
 
-        <div id="lead">
-            <div id="particles-js">
-                <div id="lead-content">
-                    <h1 style="max-width: 600px; margin: 1.5rem auto; padding: 1rem; background-color: rgba(0, 0, 0, 0.6); color: white; border-radius: 8px;">Collin Rismiller</h1>
-                    <h2 style="max-width: 600px; margin: 1.5rem auto; padding: 1rem; background-color: rgba(0, 0, 0, 0.6); color: white; border-radius: 8px;">Electrical and Computer Engineering</h2>
-                    
-                    <center>
-                        <h4 style="max-width: 600px; margin: 1.5rem auto; padding: 1rem; background-color: rgba(0, 0, 0, 0.6); color: white; border-radius: 8px;">
-                            <a href="CollinRismillerResume.pdf" 
-                            class="btn-rounded-white" 
-                            target="_blank"
-                            onclick="gtag('event', 'resume_download', {
-                                event_category: 'engagement',
-                                event_label: 'CollinRismillerResume.pdf'
-                            });">
-                                <i class="fa fa-download" aria-hidden="true"></i> Download Resume
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="https://www.linkedin.com/in/collin-rismiller/" class="btn-rounded-white">
-                                <i class="fa fa-linkedin-square" aria-hidden="true"></i> View Linkedin
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="https://github.com/CollinRis" class="btn-rounded-white">
-                                <i class="fa fa-github" aria-hidden="true"></i> View Github
-                            </a>
-                        </h4>
-                    </center>
-                </div>
-            </div>
+<!-- Lead / Hero -->
+<div id="lead">
+  <!-- Particle background version -->
+  <div id="particles-js">
+    <div id="lead-content">
+      <h1 class="highlight-box">Collin Rismiller</h1>
+      <h2 class="highlight-box">Electrical and Computer Engineering</h2>
 
-            <div id="no-particles-js">
-                <div id="no-lead-content">
-                    <h1>Collin Rismiller</h1>
-                    <h2>ECE Student</h2>
-                    <center>
-                        <h4>
-                            <a href="CollinRismillerResume.pdf" class="btn-rounded-white" target="_blank">
-                                <i class="fa fa-download" aria-hidden="true"></i> Download Resume
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="https://www.linkedin.com/in/Collin-Rismiller/" class="btn-rounded-white">
-                                <i class="fa fa-linkedin-square" aria-hidden="true"></i> View Linkedin
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
-                            <a href="https://github.com/CollinRis" class="btn-rounded-white">
-                                <i class="fa fa-github" aria-hidden="true"></i> View Github
-                            </a>
-                        </h4>
-                    </center>
-                </div>
-            </div>
+      <div class="highlight-box">
+        <div class="actions">
+          <a
+            href="CollinRismillerResume.pdf"
+            class="btn-rounded-white"
+            target="_blank"
+            rel="noopener"
+            onclick="gtag('event','resume_download',{event_category:'engagement',event_label:'CollinRismillerResume.pdf'});"
+          >
+            <i class="fa fa-download" aria-hidden="true"></i> Download Resume
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/collin-rismiller/"
+            class="btn-rounded-white"
+            rel="noopener"
+          >
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i> View LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/CollinRis"
+            class="btn-rounded-white"
+            rel="noopener"
+          >
+            <i class="fa fa-github" aria-hidden="true"></i> View GitHub
+          </a>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- End #lead-content -->
-        <div id="lead-overlay"></div>
+  <!-- No-particles fallback (shown on mobile/tablet or prefers-reduced-motion) -->
+  <div id="no-particles-js">
+    <div id="no-lead-content">
+      <h1 class="highlight-box">Collin Rismiller</h1>
+      <h2 class="highlight-box">ECE Student</h2>
 
-        
+      <div class="highlight-box">
+        <div class="actions">
+          <a
+            href="CollinRismillerResume.pdf"
+            class="btn-rounded-white"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa fa-download" aria-hidden="true"></i> Download Resume
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/collin-rismiller/"
+            class="btn-rounded-white"
+            rel="noopener"
+          >
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i> View LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/CollinRis"
+            class="btn-rounded-white"
+            rel="noopener"
+          >
+            <i class="fa fa-github" aria-hidden="true"></i> View GitHub
+          </a>
         </div>
-        <!-- End #lead -->
+      </div>
+    </div>
+  </div>
+
+  <div id="lead-overlay"></div>
+</div>
+<!-- End #lead -->
+
+
 
         <div id="about">
             <div class="container">
