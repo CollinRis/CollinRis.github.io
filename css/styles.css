@@ -239,4 +239,35 @@ body { padding-top: 72px; }
     padding: 0.75rem;
   }
 }
+@media (max-width: 768px){
+  header #menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;          
+    width: 100%;                 
+    max-width: 100%;             
+    box-sizing: border-box;
+    padding: 0.5rem 0;
+    margin: 0;
+    background: rgba(0,0,0,0.6);   /* translucent black */
+    backdrop-filter: blur(6px);    /* subtle blur effect behind menu */
+    border-radius: 0;
+    text-align: center;
+  }
+
+  header #menu li {
+    width: 100%;                  
+  }
+
+  header #menu a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    color: #fff;                   /* white text for contrast */
+  }
+
+  header #menu a:hover {
+    background: rgba(255,255,255,0.1); /* faint highlight on hover/tap */
+  }
+}
 
