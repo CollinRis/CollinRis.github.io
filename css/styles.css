@@ -270,4 +270,40 @@ body { padding-top: 72px; }
     background: rgba(255,255,255,0.1); /* faint highlight on hover/tap */
   }
 }
+@media (max-width: 768px){
+  header #menu {
+    display: flex;                 /* keep flex so animation works */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    text-align: center;
+
+    /* animation setup */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  header #menu li { width: 100%; }
+  header #menu a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    color: #fff;
+  }
+  header #menu a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* expand when toggle is checked */
+  #nav-toggle:checked ~ #menu {
+    max-height: 500px; /* large enough to fit all links */
+  }
+}
+
 
