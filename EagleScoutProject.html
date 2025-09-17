@@ -1,103 +1,185 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Learn about Collin Rismiller's Eagle Scout Project. View photos and read about the construction of a Gaga Ball Pit at Heritage Park.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eagle Scout Project</title>
-    <link rel="shortcut icon" href="CollinRis.ico" type="image/CollinRis">
-    <link rel="icon" href="CollinRis.ico" type="image/CollinRis">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="Learn about Collin Rismiller's Eagle Scout Project: construction of a Gaga Ball Pit at Heritage Park, Versailles, Ohio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eagle Scout Project – Gaga Ball Pit</title>
+
+  <link rel="icon" href="CollinRis.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span>
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu">
-            <li><a href="https://collinris.github.io">Back To Home</a></li>
-        </ul>
-    </header>
+  <!-- Header (same hamburger pattern as home) -->
+  <header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu">☰ Menu</label>
 
-    <div id="lead">
-        <div id="particles-js">
-            <div id="lead-content">
-                <h1 style="max-width: 600px; margin: 1.5rem auto; padding: 1rem; background-color: rgba(0, 0, 0, 0.6); color: white; border-radius: 8px;">Eagle Scout Project</h1>
-                <h2 style="max-width: 600px; margin: 1.5rem auto; padding: 1rem; background-color: rgba(0, 0, 0, 0.6); color: white; border-radius: 8px;">Gaga Ball Pit at Heritage Park</h2>
-                <p style="max-width: 600px; margin: 1.5rem auto; padding: 1rem; background-color: rgba(0, 0, 0, 0.6); color: white; border-radius: 8px;">
-                    Completed in October 2022, this project involved the design, planning, and construction of a permanent Gaga Ball Pit at Heritage Park in Versailles, Ohio.
-                </p>
-            </div>
-        </div>
-        <div id="lead-overlay"></div>
-        <div id="lead-down">
-            <p><span><i class="fa fa-angle-down" aria-hidden="true"></i></span></p>
-        </div>
+    <ul id="menu">
+  <li><a href="/" class="back-home" rel="noopener">Back To Home</a></li>
+</ul>
+
+  </header>
+
+  <!-- Lead / Hero -->
+  <div id="lead">
+    <div id="particles-js">
+      <div id="lead-content">
+        <h1 class="highlight-box">Eagle Scout Project</h1>
+        <h2 class="highlight-box">Gaga Ball Pit at Heritage Park</h2>
+        <p class="highlight-box">
+          Completed in October 2022, this project involved the design, planning, and construction of a permanent Gaga Ball Pit at Heritage Park in Versailles, Ohio.
+        </p>
+      </div>
+    </div>
+    <!-- Fallback if particles are disabled on mobile/reduced-motion -->
+    <div id="no-particles-js">
+      <div id="no-lead-content">
+        <h1 class="highlight-box">Eagle Scout Project</h1>
+        <h2 class="highlight-box">Gaga Ball Pit at Heritage Park</h2>
+        <p class="highlight-box">
+          Completed in October 2022, this project involved the design, planning, and construction of a permanent Gaga Ball Pit at Heritage Park in Versailles, Ohio.
+        </p>
+      </div>
     </div>
 
-    <div id="eagle-project" class="background-alt">
-        <div class="container">
-            <h2 class="heading">Project Overview</h2>
-            <p>
-                As part of my journey to earning the rank of Eagle Scout, I designed and led the construction of a Gaga Ball Pit at Heritage Park. This community-centered project involved over 100 hours of planning, coordination, fundraising, and hands-on building.
-            </p>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="EagleProject/gagaball6.jpg" alt="Gaga Ball Pit during construction" class="img-responsive" />
-                </div>
-                <div class="col-md-6">
-                    <img src="EagleProject/Gagaball5.jpg" alt="Completed Gaga Ball Pit" class="img-responsive" />
-                </div>
-            </div>
-            <p style="margin-top: 1rem;">
-                The completed Gaga Ball Pit is now enjoyed by many families and children in the community, encouraging outdoor activity and play. The project taught me leadership, time management, and the importance of giving back.
-            </p>
-        </div>
+    <div id="lead-overlay"></div>
+    <div id="lead-down">
+      <p><span><i class="fa fa-angle-down" aria-hidden="true"></i></span></p>
     </div>
+  </div>
 
-    <div id="thanks" class="background-alt-dark">
-        <div class="container">
-            <h2 class="heading">Special Thanks</h2>
-            <p>
-                Thank you to the Versailles Parks Department, my Scout leaders, friends, family, and local sponsors who donated materials and time to make this project possible.
-            </p>
+  <!-- Project Overview -->
+  <section id="eagle-project" class="background-alt">
+    <div class="container">
+      <h2 class="heading">Project Overview</h2>
+      <p>
+        As part of my journey to earning the rank of Eagle Scout, I designed and led the construction of a Gaga Ball Pit at Heritage Park. This community-centered project involved over 100 hours of planning, coordination, fundraising, and hands-on building.
+      </p>
+
+      <div class="row" style="margin-top: 1rem;">
+        <div class="col-md-6">
+          <img
+            src="EagleProject/gagaball6.jpg"
+            alt="Gaga Ball Pit during construction"
+            class="img-responsive"
+            loading="lazy"
+          />
         </div>
+        <div class="col-md-6">
+          <img
+            src="EagleProject/Gagaball5.jpg"
+            alt="Completed Gaga Ball Pit"
+            class="img-responsive"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <p style="margin-top: 1rem;">
+        The completed Gaga Ball Pit is now enjoyed by many families and children in the community, encouraging outdoor activity and play. The project taught me leadership, time management, and the importance of giving back.
+      </p>
     </div>
+  </section>
 
-    <footer class="background-alt-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 copyright">
-                    <p>Made by Collin Rismiller.</p>
-                </div>
-                <div class="col-sm-8 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/CollinRis" target="_blank">
-                                <i class="fa fa-github" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/Collin-Rismiller/" target="_blank">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+  <!-- Thanks -->
+  <section id="thanks" class="background-alt-dark" style="padding: 50px 15px;">
+    <div class="container">
+      <h2 class="heading">Special Thanks</h2>
+      <p>
+        Thank you to the Versailles Parks Department, my Scout leaders, friends, family, and local sponsors who donated materials and time to make this project possible.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="background-alt-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 copyright">
+          <p>Made by Collin Rismiller.</p>
         </div>
-    </footer>
+        <div class="col-sm-8 social">
+          <ul>
+            <li>
+              <a href="https://github.com/CollinRis" target="_blank" rel="noopener">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/Collin-Rismiller/" target="_blank" rel="noopener">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+  <!-- Scripts (same as home) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+
+  <!-- Auto-close mobile menu like the homepage -->
+  <script>
+    (function () {
+      const navToggle = document.getElementById('nav-toggle');
+      const menu = document.getElementById('menu');
+      const toggleBtn = document.querySelector('.nav-toggle-btn');
+
+      if (!navToggle || !menu) return;
+
+      menu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          navToggle.checked = false;
+          syncAria();
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (navToggle.checked && !e.target.closest('header')) {
+          navToggle.checked = false;
+          syncAria();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navToggle.checked) {
+          navToggle.checked = false;
+          syncAria();
+        }
+      });
+
+      function syncAria() {
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', navToggle.checked ? 'true' : 'false');
+      }
+      navToggle.addEventListener('change', syncAria);
+      syncAria();
+    })();
+  </script>
+  <script>
+  (function () {
+    // Force normal navigation for any .back-home link
+    document.querySelectorAll('a.back-home').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        // Ensure no other handler blocks it
+        e.stopImmediatePropagation();
+        // If some previous code already prevented default, still navigate:
+        window.location.href = a.href;
+        // Prevent the smooth-scroll script from doing anything else
+        e.preventDefault();
+      }, true); // capture phase, run before jQuery handlers
+    });
+  })();
+</script>
+
 </body>
-
 </html>
